@@ -84,13 +84,13 @@ const Home = () => {
           <span className="text-foreground font-medium" style={{ fontSize: '16px' }}>I fix it.</span>
         </p>
 
-        <div className="grid grid-cols-3 max-[670px]:grid-cols-2" style={{ gap: '14px', marginTop: '40px' }}>
+        <div className="grid grid-cols-3 max-[639px]:grid-cols-2 max-[639px]:max-w-[472px]" style={{ gap: '14px', marginTop: '40px' }}>
           {navCards.map(({ icon: Icon, label, path }, index) => (
             <button
               key={path}
               onClick={() => navigate(path)}
-              className={`group bg-accent flex flex-col justify-between items-start text-left cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 w-[194px] h-[194px] max-[670px]:w-auto max-[670px]:h-auto max-[670px]:aspect-square ${
-                index === navCards.length - 1 ? 'max-[670px]:col-span-2 max-[670px]:aspect-auto max-[670px]:h-[233px]' : ''
+              className={`group bg-accent flex flex-col justify-between items-start text-left cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 w-[194px] h-[194px] max-[639px]:w-[229px] max-[639px]:h-[229px] ${
+                index === navCards.length - 1 ? 'max-[639px]:col-span-2 max-[639px]:!w-full max-[639px]:!h-[233px]' : ''
               }`}
               style={{ borderRadius: '24px', padding: '32px 24px' }}
             >
