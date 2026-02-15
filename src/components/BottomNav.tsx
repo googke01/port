@@ -58,7 +58,7 @@ const BottomNav = () => {
         href={socialLinks.bookACall}
         target="_blank"
         rel="noopener noreferrer"
-        className="transition-[background] duration-200 ease-in-out hover:bg-[#1a1a1a] max-[670px]:order-2 max-[670px]:text-center"
+        className="transition-[background] duration-200 ease-in-out hover:bg-[#1a1a1a] max-[670px]:order-2 max-[670px]:text-center max-[670px]:w-[227.53px]"
         style={{
           padding: '11px 24px',
           borderRadius: '50px',
@@ -66,7 +66,6 @@ const BottomNav = () => {
           fontWeight: 500,
           background: '#060606',
           color: '#ffffff',
-          width: '227.53px',
         }}
       >
         book a call
