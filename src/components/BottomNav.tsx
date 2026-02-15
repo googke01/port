@@ -10,7 +10,7 @@ const BottomNav = () => {
 
   return (
     <nav
-      className="flex items-center justify-center dock-nav max-[670px]:flex-col max-[670px]:rounded-[24px] max-[670px]:p-4"
+      className="flex items-center justify-center dock-nav max-[670px]:flex-col max-[670px]:rounded-[24px] max-[670px]:p-4 max-[670px]:w-auto max-[670px]:inline-flex"
       style={{
         marginTop: '140px',
         width: '503px',
@@ -58,7 +58,7 @@ const BottomNav = () => {
         href={socialLinks.bookACall}
         target="_blank"
         rel="noopener noreferrer"
-        className="transition-[background] duration-200 ease-in-out hover:bg-[#1a1a1a] max-[670px]:order-2 max-[670px]:w-full max-[670px]:text-center flex-1 min-w-0"
+        className="transition-[background] duration-200 ease-in-out hover:bg-[#1a1a1a] max-[670px]:order-2 max-[670px]:w-full max-[670px]:text-center"
         style={{
           padding: '11px 24px',
           borderRadius: '50px',
@@ -66,7 +66,6 @@ const BottomNav = () => {
           fontWeight: 500,
           background: '#060606',
           color: '#ffffff',
-          textAlign: 'center',
         }}
       >
         book a call
