@@ -10,7 +10,7 @@ const BottomNav = () => {
 
   return (
     <nav
-      className="flex items-center justify-center dock-nav max-[670px]:flex-col max-[670px]:rounded-[24px] max-[670px]:p-4 max-[670px]:w-auto max-[670px]:inline-flex"
+      className="flex items-center justify-center dock-nav max-[639px]:flex-col max-[639px]:rounded-[24px] max-[639px]:p-4 max-[639px]:w-auto max-[639px]:inline-flex"
       style={{
         marginTop: '140px',
         width: '503px',
@@ -22,7 +22,7 @@ const BottomNav = () => {
         zIndex: 1000,
       }}
     >
-      <div className="flex items-center gap-4 max-[670px]:order-1">
+      <div className="flex items-center gap-4 max-[639px]:order-1">
         <button
           onClick={() => navigate("/")}
           className={`flex items-center justify-center rounded-full transition-[background] duration-200 ease-in-out hover:bg-[hsl(0,0%,96%)] ${dockBorder}`}
@@ -46,7 +46,7 @@ const BottomNav = () => {
 
         <a
           href="mailto:contact@preetsuthar.me"
-          className={`hidden max-[670px]:flex items-center justify-center rounded-full transition-[background] duration-200 ease-in-out hover:bg-[hsl(0,0%,96%)] ${dockBorder}`}
+          className={`hidden max-[639px]:flex items-center justify-center rounded-full transition-[background] duration-200 ease-in-out hover:bg-[hsl(0,0%,96%)] ${dockBorder}`}
           style={{ width: '44px', height: '44px' }}
           aria-label="Mail"
         >
@@ -58,7 +58,7 @@ const BottomNav = () => {
         href={socialLinks.bookACall}
         target="_blank"
         rel="noopener noreferrer"
-        className="transition-[background] duration-200 ease-in-out hover:bg-[#1a1a1a] max-[670px]:order-2 max-[670px]:text-center max-[670px]:w-[227.53px]"
+        className="transition-[background] duration-200 ease-in-out hover:bg-[#1a1a1a] max-[639px]:order-2 max-[639px]:text-center max-[639px]:w-[227.53px]"
         style={{
           padding: '11px 24px',
           borderRadius: '50px',
@@ -73,7 +73,7 @@ const BottomNav = () => {
 
       <a
         href="mailto:contact@preetsuthar.me"
-        className={`flex items-center justify-center rounded-full transition-[background] duration-200 ease-in-out hover:bg-[hsl(0,0%,96%)] max-[670px]:hidden ${dockBorder}`}
+        className={`flex items-center justify-center rounded-full transition-[background] duration-200 ease-in-out hover:bg-[hsl(0,0%,96%)] max-[639px]:hidden ${dockBorder}`}
         style={{ width: '44px', height: '44px' }}
         aria-label="Mail"
       >
