@@ -89,8 +89,8 @@ const Home = () => {
             <button
               key={path}
               onClick={() => navigate(path)}
-              className={`group bg-accent flex flex-col justify-between items-start text-left cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 w-[194px] h-[194px] max-[670px]:w-full max-[670px]:aspect-square max-[670px]:h-auto ${
-                index === navCards.length - 1 ? 'max-[670px]:col-span-2 max-[670px]:aspect-auto max-[670px]:h-[170px]' : ''
+              className={`group bg-accent flex flex-col justify-between items-start text-left cursor-pointer hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 w-[194px] h-[194px] max-[670px]:w-[229px] max-[670px]:h-[229px] ${
+                index === navCards.length - 1 ? 'max-[670px]:col-span-2 max-[670px]:!w-[466px] max-[670px]:!h-[233px]' : ''
               }`}
               style={{ borderRadius: '24px', padding: '32px 24px' }}
             >
