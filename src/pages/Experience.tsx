@@ -71,25 +71,39 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
           back
         </button>
 
-        <h1 className="text-[20px] font-semibold text-foreground mb-2 leading-tight">
+        <h1 className="text-[20px] font-semibold text-foreground mb-1 leading-tight">
           {item.name}
         </h1>
+        <div className="flex items-center gap-2 mb-1">
+          <span className="text-[13px] text-text-muted">{item.role}</span>
+          <span className="text-[11px] text-text-muted">·</span>
+          <span className="text-[13px] text-text-muted">{item.duration}</span>
+        </div>
+        <p className="text-[13px] text-text-muted mb-6">{item.description}</p>
 
         <div className="bg-surface/90 backdrop-blur-sm rounded-card border border-border-subtle/40 shadow-card p-6">
-          <p className="text-[14px] text-text-tertiary leading-[1.75]">
-            {item.description}
-          </p>
-          {item.hasExternalLink && item.url && (
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[13px] text-foreground font-medium mt-4 hover:opacity-70 transition-opacity"
+          {item.content.split("\n").map((paragraph, idx) => (
+            <p
+              key={idx}
+              className={`text-[14px] text-text-tertiary leading-[1.75] ${
+                idx !== item.content.split("\n").length - 1 ? "mb-4" : ""
+              }`}
             >
-              Visit project <ArrowUpRight size={14} strokeWidth={2} />
-            </a>
-          )}
+              {paragraph}
+            </p>
+          ))}
         </div>
+
+        {item.hasExternalLink && item.url && (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-[13px] text-foreground font-medium mt-4 hover:opacity-70 transition-opacity"
+          >
+            Visit project <ArrowUpRight size={14} strokeWidth={2} />
+          </a>
+        )}
       </main>
 
       <BottomNav />
