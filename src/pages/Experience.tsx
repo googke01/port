@@ -1,8 +1,11 @@
-import { ArrowUpRight } from "lucide-react";
+import { useParams, useNavigate } from "react-router-dom";
+import { ArrowUpRight, ArrowLeft } from "lucide-react";
 import { experienceData } from "@/data/mock";
 import BottomNav from "@/components/BottomNav";
 
-const Experience = () => {
+const ExperienceList = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background flex flex-col items-center px-4 pb-28">
       <main className="w-full max-w-[380px] animate-fadeIn" style={{ marginTop: '51px' }} id="main-content">
@@ -19,11 +22,7 @@ const Experience = () => {
                   ? "border-b border-secondary"
                   : ""
               }`}
-              onClick={() => {
-                if (item.hasExternalLink && item.url) {
-                  window.open(item.url, '_blank', 'noopener,noreferrer');
-                }
-              }}
+              onClick={() => navigate(`/work/${item.slug}`)}
             >
               <div className="flex-1 min-w-0 mr-3">
                 <p className="text-[15px] text-foreground font-medium leading-snug">
@@ -33,13 +32,11 @@ const Experience = () => {
                   {item.description}
                 </p>
               </div>
-              {item.hasExternalLink && item.url && (
-                <ArrowUpRight
-                  size={15}
-                  strokeWidth={2}
-                  className="text-text-secondary flex-shrink-0"
-                />
-              )}
+              <ArrowUpRight
+                size={15}
+                strokeWidth={2}
+                className="text-text-secondary flex-shrink-0"
+              />
             </div>
           ))}
         </div>
@@ -48,6 +45,66 @@ const Experience = () => {
       <BottomNav />
     </div>
   );
+};
+
+const ExperienceDetail = ({ slug }: { slug: string }) => {
+  const navigate = useNavigate();
+  const item = experienceData.find((e) => e.slug === slug);
+
+  if (!item) {
+    return (
+      <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 pb-20">
+        <p className="text-text-tertiary">Project not found.</p>
+        <BottomNav />
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-background flex flex-col items-center px-4 pb-28">
+      <main className="w-full max-w-[380px] animate-fadeIn" style={{ marginTop: '50px' }} id="main-content">
+        <button
+          onClick={() => navigate("/work")}
+          className="flex items-center gap-1.5 text-[13px] text-text-secondary hover:text-foreground mb-6 transition-colors duration-200 self-start"
+        >
+          <ArrowLeft size={14} />
+          back
+        </button>
+
+        <h1 className="text-[20px] font-semibold text-foreground mb-2 leading-tight">
+          {item.name}
+        </h1>
+
+        <div className="bg-surface/90 backdrop-blur-sm rounded-card border border-border-subtle/40 shadow-card p-6">
+          <p className="text-[14px] text-text-tertiary leading-[1.75]">
+            {item.description}
+          </p>
+          {item.hasExternalLink && item.url && (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-[13px] text-foreground font-medium mt-4 hover:opacity-70 transition-opacity"
+            >
+              Visit project <ArrowUpRight size={14} strokeWidth={2} />
+            </a>
+          )}
+        </div>
+      </main>
+
+      <BottomNav />
+    </div>
+  );
+};
+
+const Experience = () => {
+  const { slug } = useParams();
+
+  if (slug) {
+    return <ExperienceDetail slug={slug} />;
+  }
+
+  return <ExperienceList />;
 };
 
 export default Experience;
