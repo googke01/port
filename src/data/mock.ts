@@ -4,6 +4,7 @@ export interface ExperienceItem {
   description: string;
   url: string | null;
   hasExternalLink: boolean;
+  slug: string;
 }
 
 export interface WritingItem {
@@ -35,6 +36,7 @@ export const experienceData: ExperienceItem[] = [
     description: "Automated content workflows, reducing manual review time by 60%.",
     url: "https://textcortext.com/",
     hasExternalLink: true,
+    slug: "text-cortext",
   },
   {
     id: 2,
@@ -42,6 +44,7 @@ export const experienceData: ExperienceItem[] = [
     description: "Built AI-driven lead qualification pipelines for the sales team.",
     url: null,
     hasExternalLink: false,
+    slug: "deeply",
   },
   {
     id: 3,
@@ -49,6 +52,7 @@ export const experienceData: ExperienceItem[] = [
     description: "Streamlined onboarding with automated KYC and document processing.",
     url: "https://landing.solcard.cc/",
     hasExternalLink: true,
+    slug: "solcard",
   },
   {
     id: 4,
@@ -56,6 +60,7 @@ export const experienceData: ExperienceItem[] = [
     description: "Designed automation systems for internal creative operations.",
     url: null,
     hasExternalLink: false,
+    slug: "mody",
   },
   {
     id: 5,
@@ -63,6 +68,7 @@ export const experienceData: ExperienceItem[] = [
     description: "Integrated AI tooling into the component design workflow.",
     url: "https://21st.dev/",
     hasExternalLink: true,
+    slug: "21st",
   },
   {
     id: 6,
@@ -70,6 +76,7 @@ export const experienceData: ExperienceItem[] = [
     description: "Shipped automated outreach and CRM sync pipelines.",
     url: "https://inbound.new/",
     hasExternalLink: true,
+    slug: "inbound",
   },
 ];
 
