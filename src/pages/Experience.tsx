@@ -4,6 +4,25 @@ import { ArrowUpRight, ArrowLeft } from "lucide-react";
 import { experienceData } from "@/data/mock";
 import BottomNav from "@/components/BottomNav";
 
+const KEY_PHRASES = [
+  "90% reduction in manual work",
+  "25 hours/week saved",
+  "45% increase in engagement",
+  "zero additional headcount",
+  "2 weeks",
+];
+
+const highlightKeyPhrases = (text: string) => {
+  const regex = new RegExp(`(${KEY_PHRASES.map(p => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+  const parts = text.split(regex);
+  return parts.map((part, i) =>
+    KEY_PHRASES.some(kp => kp.toLowerCase() === part.toLowerCase()) ? (
+      <span key={i} className="underline decoration-foreground/30 underline-offset-2 text-foreground font-medium">{part}</span>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+};
 const ExperienceList = () => {
   const navigate = useNavigate();
 
@@ -86,13 +105,13 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
           </div>
 
           <p className="text-[14px] text-text-tertiary leading-[1.75] mb-4">
-            {item.description}
+            {highlightKeyPhrases(item.description)}
           </p>
 
           {!expanded && (
             <button
               onClick={() => setExpanded(true)}
-              className="text-[13px] text-foreground font-medium hover:opacity-70 transition-opacity"
+              className="text-[13px] text-foreground font-medium underline-offset-4 decoration-foreground/40 hover:underline transition-all duration-300"
             >
               See More
             </button>
