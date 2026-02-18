@@ -29,7 +29,7 @@ const ExperienceList = () => {
                 <p className="text-[15px] text-foreground font-medium leading-snug">
                   {item.name}
                 </p>
-                <p className="text-[12px] text-text-muted mt-0.5 truncate">
+                <p className="text-[12px] text-text-muted mt-0.5 line-clamp-2">
                   {item.description}
                 </p>
               </div>
@@ -100,16 +100,54 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
 
           {expanded && (
             <div className="mt-2 animate-fadeIn">
-              {sections.map((paragraph, idx) => (
-                <p
-                  key={idx}
-                  className={`text-[14px] text-text-tertiary leading-[1.75] ${
-                    idx !== sections.length - 1 ? "mb-4" : ""
-                  }`}
-                >
-                  {paragraph}
-                </p>
-              ))}
+              {sections.map((paragraph, idx) => {
+                const isHeading = /^(The Problem|How I Solved It|The Impact)$/i.test(paragraph.trim());
+                const isSubHeading = /^\d+\.\s/.test(paragraph.trim());
+                const isBullet = paragraph.trim().startsWith("•");
+                const isResult = /^(Result:|Outcome:|Before:|After:)/i.test(paragraph.trim());
+
+                if (isHeading) {
+                  return (
+                    <h3 key={idx} className="text-[16px] font-semibold text-foreground mt-6 mb-2">
+                      {paragraph}
+                    </h3>
+                  );
+                }
+                if (isSubHeading) {
+                  return (
+                    <h4 key={idx} className="text-[14px] font-semibold text-foreground mt-4 mb-1">
+                      {paragraph}
+                    </h4>
+                  );
+                }
+                if (isBullet) {
+                  return (
+                    <p key={idx} className="text-[14px] text-text-tertiary leading-[1.75] pl-2 mb-1">
+                      {paragraph}
+                    </p>
+                  );
+                }
+                if (isResult) {
+                  return (
+                    <p key={idx} className="text-[14px] text-text-tertiary leading-[1.75] mb-2">
+                      <span className="font-semibold italic text-foreground">
+                        {paragraph.split(":")[0]}:
+                      </span>
+                      {paragraph.substring(paragraph.indexOf(":") + 1)}
+                    </p>
+                  );
+                }
+                return (
+                  <p
+                    key={idx}
+                    className={`text-[14px] text-text-tertiary leading-[1.75] ${
+                      idx !== sections.length - 1 ? "mb-3" : ""
+                    }`}
+                  >
+                    {paragraph}
+                  </p>
+                );
+              })}
             </div>
           )}
 
