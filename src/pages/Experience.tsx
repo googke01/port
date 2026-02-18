@@ -123,7 +123,7 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                 const isHeading = /^(The Problem|How I Solved It|The Impact)$/i.test(paragraph.trim());
                 const isSubHeading = /^\d+\.\s/.test(paragraph.trim());
                 const isBullet = paragraph.trim().startsWith("•");
-                const isResult = /^(Result:|Outcome:|Before:|After:)/i.test(paragraph.trim());
+                const isBeforeAfter = /→/.test(paragraph.trim());
 
                 if (isHeading) {
                   return (
@@ -146,7 +146,22 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                     </p>
                   );
                 }
-                if (isResult) {
+                if (isBeforeAfter) {
+                  const parts = paragraph.split("→");
+                  return (
+                    <div key={idx} className="flex flex-col gap-1 mb-3 mt-2">
+                      {parts.map((part, pIdx) => (
+                        <p key={pIdx} className="text-[14px] text-text-tertiary leading-[1.75]">
+                          <span className="font-semibold italic text-foreground">
+                            {part.trim().split(":")[0]}:
+                          </span>
+                          {part.trim().substring(part.trim().indexOf(":") + 1)}
+                        </p>
+                      ))}
+                    </div>
+                  );
+                }
+                if (/^(Result:|Outcome:)/i.test(paragraph.trim())) {
                   return (
                     <p key={idx} className="text-[14px] text-text-tertiary leading-[1.75] mb-2">
                       <span className="font-semibold italic text-foreground">
