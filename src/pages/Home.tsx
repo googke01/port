@@ -43,7 +43,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center px-0">
+    <div className="min-h-screen bg-background flex flex-col items-center px-0 overflow-x-hidden w-full max-w-full">
       <main className="text-center animate-fadeIn w-full flex flex-col items-center px-4" style={{ maxWidth: '1000px', marginTop: '51px' }} id="main-content">
         <p
           className="text-foreground font-medium tracking-wide"
