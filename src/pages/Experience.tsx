@@ -109,12 +109,14 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
           </p>
 
           {!expanded && (
+            <div className="flex justify-end">
             <button
               onClick={() => setExpanded(true)}
               className="text-[13px] text-foreground font-medium underline-offset-4 decoration-foreground/40 hover:underline transition-all duration-300"
             >
               See More
             </button>
+            </div>
           )}
 
           {expanded && (
