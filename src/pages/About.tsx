@@ -2,22 +2,33 @@ import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 
-const aboutItems = [
+const aboutContent = [
   {
     label: "background",
-    content: "ai automation consultant helping teams eliminate repetitive work that silently drains productivity.",
+    paragraphs: [
+      "I'm an AI automation consultant. I help teams eliminate the repetitive, soul-crushing work that silently drains their productivity — so they can focus on what actually matters.",
+    ],
   },
   {
     label: "experience",
-    content: "built products at text cortext, solcard, and 21st. now focused on designing intelligent automations.",
+    paragraphs: [
+      "I've built products at Text Cortex, SolCard, and 21st.",
+      "Now I design and ship intelligent automations — systems that think, adapt, and save real hours every week.",
+    ],
   },
   {
     label: "approach",
-    content: "understand the problem deeply, design a solution that feels invisible, and ship it fast.",
+    paragraphs: [
+      "I don't start with tools. I start with the problem.",
+      "I study how your team actually works, find the invisible bottlenecks, design a solution that feels effortless, and ship it fast.",
+    ],
   },
   {
     label: "philosophy",
-    content: "the best automation is the kind you forget exists — it just works.",
+    paragraphs: [
+      "The best automation is the kind you forget exists — it just works.",
+      "No dashboards nobody checks. No workflows that need babysitting. Just less work, more output.",
+    ],
   },
 ];
 
@@ -27,8 +38,8 @@ const contactItems = [
     url: "https://cal.com/preetsuthar",
   },
   {
-    label: "telegram",
-    url: "https://t.me/preetsuthar",
+    label: "linkedin",
+    url: "https://linkedin.com/in/preetsuthar",
   },
 ];
 
@@ -51,11 +62,11 @@ const About = () => {
         </h2>
 
         <div className="bg-surface/90 backdrop-blur-sm rounded-card border border-border-subtle/40 shadow-card overflow-hidden">
-          {aboutItems.map((item, index) => (
+          {aboutContent.map((item, index) => (
             <div
               key={item.label}
               className={`px-5 py-[14px] ${
-                index !== aboutItems.length - 1
+                index !== aboutContent.length - 1
                   ? "border-b border-secondary"
                   : ""
               }`}
@@ -63,9 +74,13 @@ const About = () => {
               <p className="text-[15px] text-foreground font-medium leading-snug">
                 {item.label}
               </p>
-              <p className="text-[13px] text-text-tertiary mt-1 leading-relaxed">
-                {item.content}
-              </p>
+              <div className="mt-1 space-y-2">
+                {item.paragraphs.map((p, pIdx) => (
+                  <p key={pIdx} className="text-[13px] text-text-tertiary leading-relaxed">
+                    {p}
+                  </p>
+                ))}
+              </div>
             </div>
           ))}
         </div>
