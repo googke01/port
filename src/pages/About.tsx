@@ -52,7 +52,7 @@ const About = () => {
           <div className="flex items-start justify-between mb-5">
             <div>
               <h1 className="text-[20px] font-semibold text-foreground leading-tight">
-                Preet Suthar
+              Dhyan Patel
               </h1>
               <p className="text-[13px] text-text-muted mt-0.5">
                 AI Automation Consultant
@@ -60,7 +60,7 @@ const About = () => {
             </div>
             <img
               src={profilePic}
-              alt="Preet Suthar"
+              alt="Dhyan Patel"
               className="w-14 h-14 rounded-full object-cover border-2 border-border-subtle/40 flex-shrink-0"
             />
           </div>
