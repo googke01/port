@@ -1,34 +1,24 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
+import profilePic from "@/assets/profile-pic.png";
 
-const aboutContent = [
+const aboutSections = [
   {
-    label: "background",
-    paragraphs: [
-      "I'm an AI automation consultant. I help teams eliminate the repetitive, soul-crushing work that silently drains their productivity — so they can focus on what actually matters.",
-    ],
+    heading: "Background",
+    text: "I'm an AI automation consultant. I help teams eliminate the repetitive, soul-crushing work that silently drains their productivity — so they can focus on what actually matters.",
   },
   {
-    label: "experience",
-    paragraphs: [
-      "I've built products at Text Cortex, SolCard, and 21st.",
-      "Now I design and ship intelligent automations — systems that think, adapt, and save real hours every week.",
-    ],
+    heading: "Experience",
+    text: "I've built products at Text Cortex, SolCard, and 21st. Now I design and ship intelligent automations — systems that think, adapt, and save real hours every week.",
   },
   {
-    label: "approach",
-    paragraphs: [
-      "I don't start with tools. I start with the problem.",
-      "I study how your team actually works, find the invisible bottlenecks, design a solution that feels effortless, and ship it fast.",
-    ],
+    heading: "Approach",
+    text: "I don't start with tools. I start with the problem. I study how your team actually works, find the invisible bottlenecks, design a solution that feels effortless, and ship it fast.",
   },
   {
-    label: "philosophy",
-    paragraphs: [
-      "The best automation is the kind you forget exists — it just works.",
-      "No dashboards nobody checks. No workflows that need babysitting. Just less work, more output.",
-    ],
+    heading: "Philosophy",
+    text: "The best automation is the kind you forget exists — it just works. No dashboards nobody checks. No workflows that need babysitting. Just less work, more output.",
   },
 ];
 
@@ -57,34 +47,38 @@ const About = () => {
           back
         </button>
 
-        <h2 className="text-text-muted text-[15px] mb-4 font-normal">
-          about me
-        </h2>
-
-        <div className="bg-surface/90 backdrop-blur-sm rounded-card border border-border-subtle/40 shadow-card overflow-hidden">
-          {aboutContent.map((item, index) => (
-            <div
-              key={item.label}
-              className={`px-5 py-[14px] ${
-                index !== aboutContent.length - 1
-                  ? "border-b border-secondary"
-                  : ""
-              }`}
-            >
-              <p className="text-[15px] text-foreground font-medium leading-snug">
-                {item.label}
+        <div className="bg-surface/90 backdrop-blur-sm rounded-card border border-border-subtle/40 shadow-card p-6">
+          {/* Header with name + pic */}
+          <div className="flex items-start justify-between mb-5">
+            <div>
+              <h1 className="text-[20px] font-semibold text-foreground leading-tight">
+                Preet Suthar
+              </h1>
+              <p className="text-[13px] text-text-muted mt-0.5">
+                AI Automation Consultant
               </p>
-              <div className="mt-1 space-y-2">
-                {item.paragraphs.map((p, pIdx) => (
-                  <p key={pIdx} className="text-[13px] text-text-tertiary leading-relaxed">
-                    {p}
-                  </p>
-                ))}
-              </div>
+            </div>
+            <img
+              src={profilePic}
+              alt="Preet Suthar"
+              className="w-14 h-14 rounded-full object-cover border-2 border-border-subtle/40 flex-shrink-0"
+            />
+          </div>
+
+          {/* Content sections */}
+          {aboutSections.map((section, idx) => (
+            <div key={section.heading} className={idx !== 0 ? "mt-5" : ""}>
+              <h3 className="text-[15px] font-semibold text-foreground mb-1">
+                {section.heading}
+              </h3>
+              <p className="text-[14px] text-text-tertiary leading-[1.75]">
+                {section.text}
+              </p>
             </div>
           ))}
         </div>
 
+        {/* Get in touch */}
         <h2 className="text-text-muted text-[15px] mb-4 mt-8 font-normal">
           get in touch
         </h2>
