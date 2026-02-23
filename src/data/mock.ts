@@ -81,8 +81,8 @@ export const projectsData: ProjectItem[] = [
 ];
 
 export const socialLinks: SocialLinks = {
-  telegram: "https://t.me/preetsuthar",
-  bookACall: "https://cal.com/preetsuthar",
+  telegram: "https://www.linkedin.com/in/dhyanptl/",
+  bookACall: "https://cal.com/dhyan.contact/30min",
   twitter: "https://x.com/preaboreal",
   github: "https://github.com/preetsuthar17",
 };

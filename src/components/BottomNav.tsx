@@ -33,7 +33,7 @@ const BottomNav = () => {
         </button>
 
         <a
-          href="https://www.linkedin.com/in/preetsuthar"
+          href="https://www.linkedin.com/in/dhyanptl/"
           target="_blank"
           rel="noopener noreferrer"
           className={`flex items-center justify-center gap-1.5 rounded-full transition-[background] duration-200 ease-in-out hover:bg-[hsl(0,0%,96%)] ${dockBorder}`}
@@ -45,7 +45,7 @@ const BottomNav = () => {
         </a>
 
         <a
-          href="mailto:contact@preetsuthar.me"
+          href="mailto:dhyan.contact@gmail.com"
           className={`hidden max-[639px]:flex items-center justify-center rounded-full transition-[background] duration-200 ease-in-out hover:bg-[hsl(0,0%,96%)] ${dockBorder}`}
           style={{ width: '44px', height: '44px' }}
           aria-label="Mail"
@@ -72,7 +72,7 @@ const BottomNav = () => {
       </a>
 
       <a
-        href="mailto:contact@preetsuthar.me"
+        href="mailto:dhyan.contact@gmail.com"
         className={`flex items-center justify-center rounded-full transition-[background] duration-200 ease-in-out hover:bg-[hsl(0,0%,96%)] max-[639px]:hidden ${dockBorder}`}
         style={{ width: '44px', height: '44px' }}
         aria-label="Mail"
