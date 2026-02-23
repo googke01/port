@@ -25,11 +25,11 @@ const aboutSections = [
 const contactItems = [
   {
     label: "book a call",
-    url: "https://cal.com/preetsuthar",
+    url: "https://cal.com/dhyan.contact/30min",
   },
   {
     label: "linkedin",
-    url: "https://linkedin.com/in/preetsuthar",
+    url: "https://www.linkedin.com/in/dhyanptl/",
   },
 ];
 
