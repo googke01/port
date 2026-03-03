@@ -3,6 +3,34 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 import profilePic from "@/assets/profile-pic.png";
 
+const KEY_PHRASES = [
+  "AI automation consultant",
+  "soul-crushing work",
+  "what actually matters",
+  "think, adapt, and save real hours",
+  "invisible bottlenecks",
+  "ships it fast",
+  "forget exists",
+  "less work, more output",
+];
+
+const highlightPhrases = (text: string) => {
+  const regex = new RegExp(
+    `(${KEY_PHRASES.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    "gi"
+  );
+  const parts = text.split(regex);
+  return parts.map((part, i) =>
+    KEY_PHRASES.some((kp) => kp.toLowerCase() === part.toLowerCase()) ? (
+      <span key={i} className="underline decoration-foreground/30 underline-offset-2 text-foreground font-medium">
+        {part}
+      </span>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+};
+
 const aboutSections = [
   {
     heading: "Background",
@@ -14,7 +42,7 @@ const aboutSections = [
   },
   {
     heading: "Approach",
-    text: "I don't start with tools. I start with the problem. I study how your team actually works, find the invisible bottlenecks, design a solution that feels effortless, and ship it fast.",
+    text: "I don't start with tools. I start with the problem. I study how your team actually works, find the invisible bottlenecks, design a solution that feels effortless, and ships it fast.",
   },
   {
     heading: "Philosophy",
@@ -72,7 +100,7 @@ const About = () => {
                 {section.heading}
               </h3>
               <p className="text-[14px] text-text-tertiary leading-[1.75]">
-                {section.text}
+                {highlightPhrases(section.text)}
               </p>
             </div>
           ))}
