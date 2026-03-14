@@ -7,7 +7,7 @@ const Projects = () => {
     <div className="min-h-screen bg-background flex flex-col items-center px-4 pb-28">
       <main className="w-full max-w-[380px] animate-fadeIn" style={{ marginTop: '51px' }} id="main-content">
         <h2 className="text-text-muted text-[15px] mb-4 font-normal">
-          results
+          testimonials
         </h2>
 
         <div className="bg-surface/90 backdrop-blur-sm rounded-card border border-border-subtle/40 shadow-card overflow-hidden">
