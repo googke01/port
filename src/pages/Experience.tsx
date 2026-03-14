@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowUpRight, ArrowLeft } from "lucide-react";
-import { experienceData } from "@/data/mock";
+import { experienceData, experienceCategories } from "@/data/mock";
 import BottomNav from "@/components/BottomNav";
 
 const KEY_PHRASES = [
