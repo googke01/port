@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowUpRight, ArrowLeft } from "lucide-react";
-import { experienceData } from "@/data/mock";
+import { experienceData, experienceCategories } from "@/data/mock";
 import BottomNav from "@/components/BottomNav";
 
 const KEY_PHRASES = [
@@ -33,33 +33,44 @@ const ExperienceList = () => {
           the work
         </h2>
 
-        <div className="bg-surface/90 backdrop-blur-sm rounded-card border border-border-subtle/40 shadow-card overflow-hidden">
-          {experienceData.map((item, index) => (
-            <div
-              key={item.id}
-              className={`flex items-center justify-between px-5 py-[14px] cursor-pointer hover:bg-surface-hover transition-colors duration-200 ${
-                index !== experienceData.length - 1
-                  ? "border-b border-secondary"
-                  : ""
-              }`}
-              onClick={() => navigate(`/work/${item.slug}`)}
-            >
-              <div className="flex-1 min-w-0 mr-3">
-                <p className="text-[15px] text-foreground font-medium leading-snug">
-                  {item.name}
-                </p>
-                <p className="text-[12px] text-text-muted mt-0.5 line-clamp-2">
-                  {item.description}
-                </p>
+        {experienceCategories.map((category) => {
+          const items = experienceData.filter((e) => e.category === category);
+          if (items.length === 0) return null;
+          return (
+            <div key={category} className="mb-6">
+              <h3 className="text-[12px] uppercase tracking-wider text-text-muted mb-2 font-medium">
+                {category}
+              </h3>
+              <div className="bg-surface/90 backdrop-blur-sm rounded-card border border-border-subtle/40 shadow-card overflow-hidden">
+                {items.map((item, index) => (
+                  <div
+                    key={item.id}
+                    className={`flex items-center justify-between px-5 py-[14px] cursor-pointer hover:bg-surface-hover transition-colors duration-200 ${
+                      index !== items.length - 1
+                        ? "border-b border-secondary"
+                        : ""
+                    }`}
+                    onClick={() => navigate(`/work/${item.slug}`)}
+                  >
+                    <div className="flex-1 min-w-0 mr-3">
+                      <p className="text-[15px] text-foreground font-medium leading-snug">
+                        {item.name}
+                      </p>
+                      <p className="text-[12px] text-text-muted mt-0.5 line-clamp-2">
+                        {item.description}
+                      </p>
+                    </div>
+                    <ArrowUpRight
+                      size={15}
+                      strokeWidth={2}
+                      className="text-text-secondary flex-shrink-0"
+                    />
+                  </div>
+                ))}
               </div>
-              <ArrowUpRight
-                size={15}
-                strokeWidth={2}
-                className="text-text-secondary flex-shrink-0"
-              />
             </div>
-          ))}
-        </div>
+          );
+        })}
       </main>
 
       <BottomNav />
