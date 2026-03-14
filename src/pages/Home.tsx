@@ -12,7 +12,7 @@ import {
 const navCards = [
   { icon: Briefcase, label: "The Work", path: "/work" },
   { icon: PenTool, label: "How I Work", path: "/process" },
-  { icon: FolderOpen, label: "Case Studies", path: "/case-studies" },
+  { icon: FolderOpen, label: "Testimonials", path: "/testimonials" },
 ];
 
 const greetings = [
