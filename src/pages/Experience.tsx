@@ -10,6 +10,16 @@ const KEY_PHRASES = [
   "45% increase in engagement",
   "zero additional headcount",
   "2 weeks",
+  "under 60 seconds",
+  "80% of queries resolved automatically",
+  "2-3 hours/day",
+  "under 5 minutes",
+  "3-5 hours/week",
+  "4-5 hours/week",
+  "10x the content output",
+  "90 minutes/week",
+  "24/7",
+  "40% lead drop-off",
 ];
 
 const highlightKeyPhrases = (text: string) => {
