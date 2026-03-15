@@ -82,7 +82,7 @@ export const experienceData: ExperienceItem[] = [
     name: "LinkedIn Lead Scraper",
     description: "An automated system that finds and exports a list of ideal clients from LinkedIn every day without anyone doing it manually.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "Lead Generation & Outreach",
     content: "An automated system that finds and exports a fresh list of ideal clients from LinkedIn every single day — without anyone doing it manually.\n\nThe Problem\n\nFinding the right people on LinkedIn takes forever when you do it by hand.\n\n• Endless scrolling and filtering through profiles\n• Copy-pasting leads into spreadsheets manually\n• Half the morning gone before outreach even starts\n\nHow I Solved It\n\n1. Smart Search Automation\n\nBuilt targeted searches based on role, industry, location, and company size that run automatically on a daily schedule.\n\n2. Intelligent Filtering\n\nAdded filters to remove irrelevant profiles, duplicates, and already-contacted leads before they hit the list.\n\n3. CRM Integration\n\nPiped everything directly into the CRM or spreadsheet, tagged and ready for outreach.\n\nThe Impact\n\nA fresh targeted lead list ready every single day with zero manual effort.\n\nBefore: 2-3 hours/day manually scraping 20-30 leads → After: Hundreds of qualified leads delivered automatically every morning\n\nOutcome: No manual searching, no wasted mornings — just a pipeline that keeps filling itself.",
     url: null,
