@@ -207,14 +207,14 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                 if (isSubHeading) {
                   return (
                     <h4 key={idx} className="text-[14px] font-semibold text-foreground mt-4 mb-1">
-                      {paragraph}
+                      {highlightKeyPhrases(paragraph)}
                     </h4>
                   );
                 }
                 if (isBullet) {
                   return (
                     <p key={idx} className="text-[14px] text-text-tertiary leading-[1.75] pl-2 mb-1">
-                      {paragraph}
+                      {highlightKeyPhrases(paragraph)}
                     </p>
                   );
                 }
@@ -227,7 +227,7 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                           <span className="font-semibold italic text-foreground">
                             {part.trim().split(":")[0]}:
                           </span>
-                          {part.trim().substring(part.trim().indexOf(":") + 1)}
+                          {highlightKeyPhrases(part.trim().substring(part.trim().indexOf(":") + 1))}
                         </p>
                       ))}
                     </div>
@@ -239,7 +239,7 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                       <span className="font-semibold italic text-foreground">
                         {paragraph.split(":")[0]}:
                       </span>
-                      {paragraph.substring(paragraph.indexOf(":") + 1)}
+                      {highlightKeyPhrases(paragraph.substring(paragraph.indexOf(":") + 1))}
                     </p>
                   );
                 }
@@ -250,7 +250,7 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                       idx !== sections.length - 1 ? "mb-3" : ""
                     }`}
                   >
-                    {paragraph}
+                    {highlightKeyPhrases(paragraph)}
                   </p>
                 );
               })}
