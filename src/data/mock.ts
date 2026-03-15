@@ -142,7 +142,7 @@ export const experienceData: ExperienceItem[] = [
     name: "LinkedIn Viral Post Analyzer",
     description: "An automation that scrapes any LinkedIn profile's top performing posts and produces a structured report on what is actually working.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "Content & Social Media",
     content: "An automation that scrapes any LinkedIn profile's top performing posts and produces a structured report on what is actually working.\n\nThe Problem\n\nMost LinkedIn creators post based on gut feeling and hope. They have no idea what actually performs.\n\n• No visibility into which post types drive engagement\n• Content strategy based on guesswork\n• Wasted effort on formats that don't resonate\n\nHow I Solved It\n\n1. Performance Scraping\n\nBuilt a system that pulls the highest performing posts from any LinkedIn profile automatically.\n\n2. Pattern Analysis Engine\n\nAnalyzes patterns across hooks, format, post length, topics, and engagement metrics to identify what's driving results.\n\n3. Actionable Report Generation\n\nGenerates a clean, structured report that shows exactly what is working and why — with specific recommendations.\n\nThe Impact\n\nYou stop guessing and start knowing.\n\nBefore: Content strategy based on gut feeling with inconsistent results → After: Data-backed content decisions with clear performance patterns identified\n\nOutcome: Every post you write from that point is backed by real data from what has already worked.",
     url: null,
