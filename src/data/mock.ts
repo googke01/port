@@ -94,7 +94,7 @@ export const experienceData: ExperienceItem[] = [
     name: "Client Onboarding Automation",
     description: "A fully automated onboarding system that kicks in the moment a client signs and handles everything that normally gets done manually.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "Client & Business Operations",
     content: "A fully automated onboarding system that kicks in the moment a client signs — handling everything that normally gets done manually.\n\nThe Problem\n\nMost agencies and freelancers onboard clients by hand. It takes time, things get missed, and the client's first experience feels slow.\n\n• Welcome emails sent late or forgotten\n• Project folders set up inconsistently\n• Team not notified about new clients\n• Contracts and NDAs delayed\n\nHow I Solved It\n\n1. Single Trigger Workflow\n\nBuilt a workflow triggered by a form submission or contract signature that kicks off the entire onboarding sequence.\n\n2. Automated Document Delivery\n\nWelcome emails, contracts, and NDAs go out instantly without anyone pressing send.\n\n3. Internal Team Notifications\n\nThe right team members get notified with all project details immediately.\n\nThe Impact\n\nOnboarding goes from a multi-day process to something that completes itself in minutes.\n\nBefore: 2-day manual onboarding with missed steps → After: Fully automated onboarding completed in under 5 minutes\n\nOutcome: Clients immediately feel like they are working with a serious, organised operation.",
     url: null,
