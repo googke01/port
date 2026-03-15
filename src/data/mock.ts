@@ -58,7 +58,7 @@ export const experienceData: ExperienceItem[] = [
     name: "Real Estate WhatsApp AI Agent",
     description: "A 24/7 AI agent on WhatsApp built specifically for real estate businesses to handle leads, answer questions, and book site visits automatically.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "AI Agents",
     content: "A 24/7 AI agent on WhatsApp built specifically for real estate businesses to handle leads, answer questions, and book site visits automatically.\n\nThe Problem\n\nReal estate leads do not wait. Someone interested at 11pm will message three agents and go with whoever responds first. Most agents miss that window completely.\n\n• Leads lost to competitors due to slow response\n• Agents overwhelmed managing inquiries across hours\n• No consistent qualification process\n\nHow I Solved It\n\n1. Property Knowledge Base\n\nTrained the agent on the business's full property portfolio, pricing, layouts, and FAQs so it answers accurately every time.\n\n2. Lead Qualification Engine\n\nBuilt smart qualifying questions into the conversation flow — budget, timeline, location preferences — so only serious leads get through.\n\n3. Automated Site Visit Booking\n\nConnected directly to the agent's calendar to book site visits without any human involvement.\n\nThe Impact\n\nLeads get a response in seconds no matter what time it is.\n\nBefore: 2-4 hour average response time, 40% lead drop-off → After: Instant responses 24/7, leads qualified and visits booked automatically\n\nOutcome: Agents wake up to qualified prospects and scheduled visits instead of missed opportunities.",
     url: null,
