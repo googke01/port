@@ -20,6 +20,55 @@ const KEY_PHRASES = [
   "90 minutes/week",
   "24/7",
   "40% lead drop-off",
+  // Important concept words to underline
+  "natural conversation",
+  "natural language",
+  "live calendar availability",
+  "no-shows",
+  "WhatsApp",
+  "real-time",
+  "smart qualifying questions",
+  "budget, timeline, location preferences",
+  "serious leads",
+  "custom AI prompts",
+  "exact tone",
+  "brand positioning",
+  "approval workflow",
+  "full control",
+  "feedback tracking",
+  "handoff system",
+  "authentic",
+  "deep research",
+  "voice-matched",
+  "strong hook",
+  "call to action",
+  "cross-platform",
+  "optimal times",
+  "audience engagement data",
+  "pattern analysis",
+  "performance patterns",
+  "data-backed",
+  "intelligent moment detection",
+  "vertical video",
+  "captions",
+  "single trigger",
+  "contract signature",
+  "escalating reminders",
+  "smart filtering",
+  "high-value posts",
+  "founder's voice",
+  "human oversight",
+  "CRM",
+  "daily schedule",
+  "duplicates",
+  "no manual effort",
+  "zero manual effort",
+  "no human involvement",
+  "without any human involvement",
+  "no manual editing required",
+  "no editing needed",
+  "automatically",
+  "instantly",
 ];
 
 const highlightKeyPhrases = (text: string) => {
@@ -121,8 +170,12 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
           </h1>
           <div className="flex items-center gap-2 mb-4">
             <span className="text-[13px] text-text-muted">{item.role}</span>
-            <span className="text-[11px] text-text-muted">·</span>
-            <span className="text-[13px] text-text-muted">{item.duration}</span>
+            {item.duration && (
+              <>
+                <span className="text-[11px] text-text-muted">·</span>
+                <span className="text-[13px] text-text-muted">{item.duration}</span>
+              </>
+            )}
           </div>
 
           <p className="text-[14px] text-text-tertiary leading-[1.75] mb-4">
@@ -158,14 +211,14 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                 if (isSubHeading) {
                   return (
                     <h4 key={idx} className="text-[14px] font-semibold text-foreground mt-4 mb-1">
-                      {paragraph}
+                      {highlightKeyPhrases(paragraph)}
                     </h4>
                   );
                 }
                 if (isBullet) {
                   return (
                     <p key={idx} className="text-[14px] text-text-tertiary leading-[1.75] pl-2 mb-1">
-                      {paragraph}
+                      {highlightKeyPhrases(paragraph)}
                     </p>
                   );
                 }
@@ -178,7 +231,7 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                           <span className="font-semibold italic text-foreground">
                             {part.trim().split(":")[0]}:
                           </span>
-                          {part.trim().substring(part.trim().indexOf(":") + 1)}
+                          {highlightKeyPhrases(part.trim().substring(part.trim().indexOf(":") + 1))}
                         </p>
                       ))}
                     </div>
@@ -190,7 +243,7 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                       <span className="font-semibold italic text-foreground">
                         {paragraph.split(":")[0]}:
                       </span>
-                      {paragraph.substring(paragraph.indexOf(":") + 1)}
+                      {highlightKeyPhrases(paragraph.substring(paragraph.indexOf(":") + 1))}
                     </p>
                   );
                 }
@@ -201,7 +254,7 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                       idx !== sections.length - 1 ? "mb-3" : ""
                     }`}
                   >
-                    {paragraph}
+                    {highlightKeyPhrases(paragraph)}
                   </p>
                 );
               })}
