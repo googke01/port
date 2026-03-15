@@ -70,7 +70,7 @@ export const experienceData: ExperienceItem[] = [
     name: "AI Customer Support Agent",
     description: "A custom AI agent that handles customer support without a support team behind it.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "AI Agents",
     content: "A custom AI agent that handles customer support queries instantly — without a support team behind it.\n\nThe Problem\n\nSmall businesses and agencies lose customers to slow replies but cannot afford to hire a full support team.\n\n• Founders buried answering the same questions all day\n• Customers leaving due to slow response times\n• No budget for dedicated support staff\n\nHow I Solved It\n\n1. Custom Knowledge Training\n\nTrained the agent on the business's products, common questions, tone, and internal processes so responses feel authentic.\n\n2. Smart Escalation Logic\n\nBuilt a handoff system that only passes conversations to a human when the AI genuinely cannot resolve the issue.\n\n3. Continuous Learning Loop\n\nAdded feedback tracking so the agent improves over time based on real interactions.\n\nThe Impact\n\nMost support queries get resolved instantly without any human involvement.\n\nBefore: Hours-long response times, repetitive manual replies → After: Instant AI-powered responses, 80% of queries resolved automatically\n\nOutcome: Response times go from hours to seconds and the team stops getting buried in repetitive questions.",
     url: null,
