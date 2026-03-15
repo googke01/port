@@ -46,7 +46,7 @@ export const experienceData: ExperienceItem[] = [
     name: "AI Appointment Booking Agent",
     description: "A WhatsApp AI agent that handles the entire booking process through natural conversation. No forms, no back and forth, no human needed.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "AI Agents",
     content: "A WhatsApp AI agent that handles the entire booking process through natural conversation. No forms, no back and forth, no human needed.\n\nThe Problem\n\nService businesses lose a ridiculous amount of time just trying to schedule meetings. Someone messages you, you reply, they go quiet, you follow up, they suggest a time that doesn't work. It goes on forever. And if you're busy, leads just fall off.\n\n• Hours wasted in back-and-forth scheduling\n• Leads dropping off due to slow response times\n• No scalable way to handle booking volume\n\nHow I Solved It\n\n1. Built Conversational Booking Flow\n\nDesigned a WhatsApp agent that understands what the person needs through natural language. No forms, no links, just a conversation.\n\n2. Real-Time Calendar Integration\n\nConnected the agent to live calendar availability so it picks the right slot and confirms the booking directly in the chat.\n\n3. Automated Follow-Ups\n\nAdded automatic rescheduling handling and reminder sequences so no-shows drop significantly.\n\nThe Impact\n\nThe entire booking process now runs without anyone touching it.\n\nBefore: Manual scheduling taking 3-5 messages per booking → After: Fully automated booking in under 60 seconds\n\nOutcome: Clients book themselves, the calendar fills up, and the business owner focuses on actual work.",
     url: null,
