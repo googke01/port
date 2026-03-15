@@ -130,7 +130,7 @@ export const experienceData: ExperienceItem[] = [
     name: "Social Media Automation Suite",
     description: "A content distribution system that takes one post or blog and publishes it across LinkedIn, Instagram, and X automatically.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "Content & Social Media",
     content: "A content distribution system that takes one post or blog and publishes it across LinkedIn, Instagram, and X — automatically.\n\nThe Problem\n\nPosting consistently across multiple platforms is genuinely exhausting.\n\n• Hours spent reformatting the same content for each platform\n• Inconsistent posting across channels\n• Most businesses stick to one platform and ignore the rest\n\nHow I Solved It\n\n1. Cross-Platform Reformatting\n\nBuilt a suite that takes a single input and reformats it for each platform's requirements — tone, length, hashtags, and format.\n\n2. Smart Scheduling\n\nSchedules posts at optimal times for each platform based on audience engagement data.\n\n3. Engagement Automation\n\nAuto-replies to LinkedIn comments and handles blog-to-post conversion as part of the same pipeline.\n\nThe Impact\n\nOne piece of content. Multiple platforms covered.\n\nBefore: 4-5 hours/week manually posting across 3 platforms → After: Single input, all platforms published automatically\n\nOutcome: A consistent presence without the daily manual effort.",
     url: null,
