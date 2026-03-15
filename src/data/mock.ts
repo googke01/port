@@ -106,7 +106,7 @@ export const experienceData: ExperienceItem[] = [
     name: "Automated Invoice & Contract Sender",
     description: "A system that generates, sends, and follows up on invoices and contracts automatically based on project details.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "Client & Business Operations",
     content: "A system that generates, sends, and follows up on invoices and contracts automatically — based on project details.\n\nThe Problem\n\nChasing invoices and sending contracts manually eats hours every week without feeling like real work.\n\n• Invoices sent late or forgotten entirely\n• Awkward manual follow-ups for overdue payments\n• Contracts sitting in drafts instead of reaching clients\n\nHow I Solved It\n\n1. Auto-Generation Engine\n\nBuilt a system that generates the correct invoice or contract based on project type, scope, and pricing automatically.\n\n2. Scheduled Delivery\n\nDocuments go out to the client immediately upon trigger — no manual sending required.\n\n3. Smart Follow-Up Sequences\n\nIf a client hasn't acted within a set number of days, the system follows up automatically with escalating reminders.\n\nThe Impact\n\nNo more manual paperwork, no more awkward payment chasing.\n\nBefore: 3-5 hours/week on invoicing and follow-ups → After: Fully automated with zero manual intervention\n\nOutcome: Everything goes out on time and follows up on its own.",
     url: null,
