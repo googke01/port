@@ -118,7 +118,7 @@ export const experienceData: ExperienceItem[] = [
     name: "LinkedIn Post Writer",
     description: "An AI workflow that takes a topic, researches it properly, and writes a fully formatted LinkedIn post ready to publish.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "Content & Social Media",
     content: "An AI workflow that takes a topic, does deep research, and writes a fully formatted LinkedIn post — ready to publish.\n\nThe Problem\n\nWriting good LinkedIn posts consistently takes real time. Most founders either post randomly or outsource it and get generic content.\n\n• Inconsistent posting schedule hurting visibility\n• Hours spent writing a single post\n• Outsourced content that sounds nothing like you\n\nHow I Solved It\n\n1. Deep Research Pipeline\n\nBuilt a system that takes a topic and runs a thorough research pass — pulling relevant insights, data, and angles.\n\n2. Voice-Matched Writing\n\nEngineered prompts that capture the founder's exact tone, vocabulary, and positioning so every post sounds authentic.\n\n3. Ready-to-Publish Output\n\nPosts come out with a strong hook, clean formatting, and a clear call to action — no editing needed.\n\nThe Impact\n\nConsistent quality content without sitting down to write it.\n\nBefore: 1-2 hours per post, inconsistent schedule → After: Research-backed posts generated in minutes, ready to publish daily\n\nOutcome: The personal brand stays active even during the busiest weeks.",
     url: null,
