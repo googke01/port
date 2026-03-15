@@ -170,8 +170,12 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
           </h1>
           <div className="flex items-center gap-2 mb-4">
             <span className="text-[13px] text-text-muted">{item.role}</span>
-            <span className="text-[11px] text-text-muted">·</span>
-            <span className="text-[13px] text-text-muted">{item.duration}</span>
+            {item.duration && (
+              <>
+                <span className="text-[11px] text-text-muted">·</span>
+                <span className="text-[13px] text-text-muted">{item.duration}</span>
+              </>
+            )}
           </div>
 
           <p className="text-[14px] text-text-tertiary leading-[1.75] mb-4">

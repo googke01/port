@@ -166,7 +166,7 @@ export const experienceData: ExperienceItem[] = [
     name: "YouTube / Podcast to Shorts & Reels",
     description: "An automated pipeline that turns long form video or audio into short form clips ready to post.",
     role: "AI Automation Consultant",
-    duration: "Ongoing",
+    duration: "",
     category: "Content & Social Media",
     content: "An automated pipeline that turns long form video or audio into short form clips — ready to post on YouTube Shorts, Instagram Reels, and TikTok.\n\nThe Problem\n\nCreators record hours of valuable content that barely gets seen because long form does not perform on short form platforms.\n\n• Manual clip editing is slow and expensive\n• Hiring an editor just for repurposing isn't cost-effective\n• Valuable content trapped in long-form format\n\nHow I Solved It\n\n1. Intelligent Moment Detection\n\nBuilt a pipeline that analyzes the full recording and identifies the most valuable, engaging moments automatically.\n\n2. Auto-Formatting Engine\n\nAdds captions, formats everything for vertical video, and adjusts aspect ratios for each platform.\n\n3. Ready-to-Post Output\n\nClips come out fully formatted and ready to upload — no manual editing required.\n\nThe Impact\n\n10x the content output from the same recording.\n\nBefore: 1 long-form video = 1 piece of content → After: 1 recording = 10+ short-form clips across all platforms\n\nOutcome: Long form content finally reaches short form audiences without any extra work.",
     url: null,
