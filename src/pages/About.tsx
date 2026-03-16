@@ -17,6 +17,9 @@ const KEY_PHRASES = [
   "AI automation, web development, and personal branding",
   "business problem it needs to solve",
   "work speaks for itself",
+  "invisible",
+  "less noise, more output",
+  "fancy system to manage",
 ];
 
 const highlightPhrases = (text: string) => {
