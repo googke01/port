@@ -12,6 +12,11 @@ const KEY_PHRASES = [
   "ships it fast",
   "forget exists",
   "less work, more output",
+  "clients that matter",
+  "25 hours of manual work",
+  "AI automation, web development, and personal branding",
+  "business problem it needs to solve",
+  "work speaks for itself",
 ];
 
 const highlightPhrases = (text: string) => {
