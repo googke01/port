@@ -1,7 +1,43 @@
-import { useParams, useNavigate } from "react-router-dom";
-import { ArrowUpRight, ArrowLeft } from "lucide-react";
-import { writingData } from "@/data/mock";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import { processSteps } from "@/data/mock";
 import BottomNav from "@/components/BottomNav";
+
+const KEY_PHRASES = [
+  "biggest bottlenecks",
+  "automation",
+  "where time is being lost",
+  "Not a template",
+  "Yours",
+  "clear breakdown",
+  "timeline",
+  "cost",
+  "No vague scope",
+  "no surprises later",
+  "50% upfront",
+  "keep you updated",
+  "real scenarios",
+  "walk you through it",
+  "Monthly audits",
+  "maintenance",
+];
+
+const highlightPhrases = (text: string) => {
+  const regex = new RegExp(
+    `(${KEY_PHRASES.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    "gi"
+  );
+  const parts = text.split(regex);
+  return parts.map((part, i) =>
+    KEY_PHRASES.some((kp) => kp.toLowerCase() === part.toLowerCase()) ? (
+      <span key={i} className="underline decoration-foreground/30 underline-offset-2 text-foreground font-medium">
+        {part}
+      </span>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+};
 
 const WritingList = () => {
   const navigate = useNavigate();
