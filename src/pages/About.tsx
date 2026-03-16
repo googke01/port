@@ -12,6 +12,11 @@ const KEY_PHRASES = [
   "ships it fast",
   "forget exists",
   "less work, more output",
+  "clients that matter",
+  "25 hours of manual work",
+  "AI automation, web development, and personal branding",
+  "business problem it needs to solve",
+  "work speaks for itself",
 ];
 
 const highlightPhrases = (text: string) => {
@@ -38,7 +43,7 @@ const aboutSections = [
   },
   {
     heading: "Experience",
-    text: "I've built products at Text Cortex, SolCard, and 21st. Now I design and ship intelligent automations — systems that think, adapt, and save real hours every week.",
+    text: "Under a year in, and already working with clients that matter. I have worked with two clients so far, including a large media company where I automated their internal workflows and cut 25 hours of manual work from their week. Every single week. My background covers AI automation, web development, and personal branding. That combination matters because I do not just understand how to build the system, I understand the business problem it needs to solve. Early in the journey. But the work speaks for itself.",
   },
   {
     heading: "Approach",
