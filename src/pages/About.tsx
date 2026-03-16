@@ -17,6 +17,9 @@ const KEY_PHRASES = [
   "AI automation, web development, and personal branding",
   "business problem it needs to solve",
   "work speaks for itself",
+  "invisible",
+  "less noise, more output",
+  "fancy system to manage",
 ];
 
 const highlightPhrases = (text: string) => {
@@ -51,7 +54,7 @@ const aboutSections = [
   },
   {
     heading: "Philosophy",
-    text: "The best automation is the kind you forget exists — it just works. No dashboards nobody checks. No workflows that need babysitting. Just less work, more output.",
+    text: "Good automation should be invisible. You set it up, it runs, and three months later someone on your team asks why things feel so much easier. That is the goal. Not a fancy system to manage. Just less noise, more output.",
   },
 ];
 
