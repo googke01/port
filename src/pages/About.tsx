@@ -54,7 +54,7 @@ const aboutSections = [
   },
   {
     heading: "Philosophy",
-    text: "The best automation is the kind you forget exists — it just works. No dashboards nobody checks. No workflows that need babysitting. Just less work, more output.",
+    text: "Good automation should be invisible. You set it up, it runs, and three months later someone on your team asks why things feel so much easier. That is the goal. Not a fancy system to manage. Just less noise, more output.",
   },
 ];
 
