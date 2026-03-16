@@ -24,7 +24,7 @@ const KEY_PHRASES = [
 
 const highlightPhrases = (text: string) => {
   const regex = new RegExp(
-    `(${KEY_PHRASES.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    `\\b(${KEY_PHRASES.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})\\b`,
     "gi"
   );
   const parts = text.split(regex);
