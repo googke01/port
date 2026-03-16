@@ -101,7 +101,7 @@ const About = () => {
           {/* Content sections */}
           {aboutSections.map((section, idx) => (
             <div key={section.heading} className={idx !== 0 ? "mt-5" : ""}>
-              <h3 className="text-[15px] font-semibold text-foreground mb-1">
+              <h3 className="text-[17px] font-semibold text-foreground mb-1">
                 {section.heading}
               </h3>
               <p className="text-[14px] text-text-tertiary leading-[1.75]">
