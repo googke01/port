@@ -175,22 +175,38 @@ export const experienceData: ExperienceItem[] = [
   },
 ];
 
-export const writingData: WritingItem[] = [
+export const processSteps = [
   {
-    id: 1,
-    title: "Why most teams automate the wrong things",
-    date: "Jan 31, 2026",
-    slug: "automate-wrong-things",
-    content:
-      "Most teams jump straight to automating the loudest pain point, but that's rarely the right move.\n\nThe real wins come from mapping the entire workflow first. You need to see where time actually disappears: the 15-minute task done 40 times a week, the copy-paste between three tools, the status update that requires opening four tabs.\n\nI start every engagement by shadowing the team. Not asking what they want automated, but watching what they actually do. The gap between those two things is where the biggest opportunities live.\n\nOnce you find the right bottleneck, the automation itself is usually straightforward. The hard part is picking the right problem. Get that right, and the ROI speaks for itself.",
+    heading: "Discovery Call",
+    text: "We talk about your business, your biggest bottlenecks, and what you actually want fixed. You do not need to know anything about automation. That is my job.",
   },
   {
-    id: 2,
-    title: "My automation stack in 2026",
-    date: "Jan 14, 2026",
-    slug: "automation-stack",
-    content:
-      "Every automation I build sits on top of a carefully chosen stack. Here is what I rely on and why each piece earns its place.\n\nFor orchestration, I use Make (formerly Integromat) when clients need visual, multi-step workflows they can understand at a glance. For heavier, self-hosted pipelines where I need full control, n8n is my go-to. Zapier still has a role for quick, client-facing integrations that need to be live in minutes.\n\nOn the AI side, OpenAI's API handles most text processing and classification tasks. Claude is my preference for document analysis and long-form summarization where nuance matters. For domain-specific work, I build and deploy custom fine-tuned models.\n\nThe data and infrastructure layer runs on Supabase for real-time databases and authentication, Airtable as a flexible data layer when non-technical teams need direct access, and Retool for internal dashboards that pull everything together.\n\nFor communication, I build Telegram bots for alerts and quick actions, and Slack integrations for team-facing notifications. The goal is always to meet people where they already work rather than adding another tool to check.",
+    heading: "Deep Dive",
+    text: "I study how your team works, where time is being lost, and what a real solution looks like for your specific situation. Not a template. Yours.",
+  },
+  {
+    heading: "Proposal",
+    text: "You get a clear breakdown of what I will build, the timeline, and the cost. No vague scope, no surprises later.",
+  },
+  {
+    heading: "Contract and Kickoff",
+    text: "We sign, you pay 50% upfront, and the build starts. Simple.",
+  },
+  {
+    heading: "Build",
+    text: "I build and keep you updated. You will always know where things stand without needing to chase me.",
+  },
+  {
+    heading: "Testing",
+    text: "Everything gets tested against real scenarios before it goes anywhere near your actual business.",
+  },
+  {
+    heading: "Deployment",
+    text: "Goes live. I walk you through it so you know exactly what is running and why.",
+  },
+  {
+    heading: "Monthly Retainer (Optional)",
+    text: "Your business changes. Your automations should keep up. Monthly audits and maintenance to make sure everything keeps running the way it should.",
   },
 ];
 
