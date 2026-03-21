@@ -91,6 +91,10 @@ export default {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(100%)" },
         },
+        "shimmer-text": {
+          "0%": { backgroundPosition: "100% 0" },
+          "100%": { backgroundPosition: "-100% 0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
