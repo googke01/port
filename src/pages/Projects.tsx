@@ -9,14 +9,17 @@ const Projects = () => {
         </h2>
 
         <div className="flex flex-col items-center justify-center py-16">
-          <p className="text-[22px] font-medium text-foreground tracking-tight relative overflow-hidden">
+          <p
+            className="text-[22px] font-medium tracking-tight animate-[shimmer-text_3s_ease-in-out_infinite]"
+            style={{
+              background: 'linear-gradient(90deg, hsl(var(--foreground)) 0%, hsl(var(--foreground)) 40%, hsl(var(--foreground) / 0.4) 50%, hsl(var(--foreground)) 60%, hsl(var(--foreground)) 100%)',
+              backgroundSize: '200% 100%',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
             real stories coming
-            <span
-              className="absolute inset-0 -translate-x-full animate-[shimmer_2.5s_ease-in-out_infinite]"
-              style={{
-                background: 'linear-gradient(90deg, transparent 0%, hsl(var(--foreground) / 0.06) 40%, hsl(var(--foreground) / 0.12) 50%, hsl(var(--foreground) / 0.06) 60%, transparent 100%)',
-              }}
-            />
           </p>
           <div className="mt-3 h-[1px] w-16 bg-foreground/10 relative overflow-hidden rounded-full">
             <span
