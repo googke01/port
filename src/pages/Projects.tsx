@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
-import { projectsData } from "@/data/mock";
 import BottomNav from "@/components/BottomNav";
 
 const Projects = () => {
@@ -10,7 +8,17 @@ const Projects = () => {
           testimonials
         </h2>
 
-        <p className="text-[15px] text-text-muted">real stories coming</p>
+        <div className="flex flex-col items-center justify-center py-16">
+          <div className="relative">
+            <p className="text-[22px] font-medium text-foreground tracking-tight">
+              real stories coming
+            </p>
+            <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-foreground/20 to-transparent animate-pulse" />
+          </div>
+          <p className="text-[13px] text-text-muted mt-4 animate-pulse" style={{ animationDuration: '3s' }}>
+            stay tuned
+          </p>
+        </div>
       </main>
 
       <BottomNav />
