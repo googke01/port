@@ -5,7 +5,8 @@ import "./index.css";
 // Preload profile picture so it's cached before navigating to /about
 import profilePic from "@/assets/profile-pic.png";
 const link = document.createElement("link");
-link.rel = "prefetch";
+link.rel = "preload";
+link.as = "image";
 link.href = profilePic;
 document.head.appendChild(link);
 
