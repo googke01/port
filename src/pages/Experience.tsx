@@ -216,10 +216,15 @@ const ExperienceDetail = ({ slug }: { slug: string }) => {
                   );
                 }
                 if (isBullet) {
+                  const bulletLines = paragraph.split("\n").filter(line => line.trim());
                   return (
-                    <p key={idx} className="text-[14px] text-text-tertiary leading-[1.75] pl-2 mb-1">
-                      {highlightKeyPhrases(paragraph)}
-                    </p>
+                    <div key={idx} className="mb-2">
+                      {bulletLines.map((line, bIdx) => (
+                        <p key={bIdx} className="text-[14px] text-text-tertiary leading-[1.75] pl-2 mb-1">
+                          {highlightKeyPhrases(line.trim())}
+                        </p>
+                      ))}
+                    </div>
                   );
                 }
                 if (isBeforeAfter) {
