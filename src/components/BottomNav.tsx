@@ -45,7 +45,7 @@ const BottomNav = () => {
           style={{ height: '44px', paddingLeft: '12px', paddingRight: '12px' }}
           aria-label="LinkedIn"
         >
-          <img src={linkedinLogo} alt="" style={{ width: '20px', height: 'auto' }} />
+          <LinkedInIcon />
           <span style={{ fontSize: '15px', color: '#060606', fontWeight: 500 }}>linkedin</span>
         </a>
 
