@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center px-4 pb-28">
       <main className="w-full max-w-[380px] animate-fadeIn" style={{ marginTop: '51px' }} id="main-content">
-        <p className="text-[15px] text-text-muted font-normal text-center mb-5">testimonials</p>
+        <h2 className="text-text-muted text-[15px] mb-4 font-normal">testimonials</h2>
 
         {SHOW_TESTIMONIALS ? (
           <>
