@@ -47,13 +47,15 @@ const Projects = () => {
             ))}
           </>
         ) : (
-          <div className="flex flex-col items-center justify-center mt-24 gap-3">
+          <div className="flex flex-col items-center justify-center mt-24 gap-4">
             <TextShimmer
               duration={2.5}
-              className="text-[15px] font-medium text-text-muted"
+              className="text-[28px] font-semibold tracking-tight"
             >
-              real stories coming · stay tuned
+              real stories coming
             </TextShimmer>
+            <div className="w-10 h-[1px] bg-foreground/10" />
+            <p className="text-[13px] text-text-muted">stay tuned</p>
           </div>
         )}
 
